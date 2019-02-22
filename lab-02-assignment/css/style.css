@@ -1,0 +1,12 @@
+#title {
+    text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: overline;
+  color: blue;
+  text-shadow: 3px 2px red;
+  float: left;
+/*   margin-bottom: 20px; */
+}
