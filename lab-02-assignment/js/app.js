@@ -1,7 +1,7 @@
 var user = getUsername();
 	console.log(user);
 	alert('Welcome ' + user + ' to my personal blog');
-var playGame = oktoPlay();
+var playGame = okToPlay();
 	play(playGame);
 	var car = findMyCar();
 	favouriteCar(car);
