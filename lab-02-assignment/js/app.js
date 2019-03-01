@@ -1,14 +1,36 @@
 var user = getUsername();
 	console.log(user);
 	alert('Welcome ' + user + ' to my personal blog');
+
 var playGame = okToPlay();
 	play(playGame);
-	var car = findMyCar();
-	favouriteCar(car);
+	console.log(playGame);
+var car = findMyCar();
+     favouriteCar(car);
 	var bornCity = getBirthRegion();
 	birthPlace(bornCity);
 	var sport = getFavouriteSport();
 	favouriteSport(sport);
+    var number;
+    var counter = 1;
+   while (number !== 08) {
+    number = parseInt(prompt('guess my favorite number'));
+    if (number < 08) {
+        alert('sorry you guessed too low');
+        counter++;
+    } else if (number === 08) {
+        alert('Coorrrect Guess');
+		counter++;
+	}else if (number > 08) {
+        alert('you guessed too high');
+        counter++;
+    } else if (isNaN(number) || number === null) {
+        alert('please enter an actual number');
+        counter++;
+    }
+}
+
+console.log('total guesses until i got it:', counter);
 
 	alert('Thank you for playing Guessing Game about Myself!!!');
 
@@ -28,12 +50,12 @@ function findMyCar() {
 };
 
 function getBirthRegion() {
-	birthPlace = window.prompt('Guess my Birth Village');
+	var birthPlace = window.prompt('Guess my Birth Village');
 	return birthPlace;
 };
 
 function getFavouriteSport() {
-	sport = window.prompt('Guess my Favourite Sport');
+	var sport = window.prompt('Guess my Favourite Sport');
 	return sport;
 };
 
@@ -57,24 +79,17 @@ function play(playGame){
 function favouriteCar(car){
 	car = this.car;
 	var favouriteCar = 'Porsche';
-	if (car === null) {
-		alert('No User Input. Please enter')
-	}
-	else if (car === favouriteCar) {
-		alert('Congratulations!! '+ car +' is correct answer.');
-	}
-	else {
-		alert('ooops!!'+ car +' is incorrect answer.Please Play again to guess correctly');
-	}
+    if (car === favouriteCar) {
+		alert('you got it right!');
+}
+else {
+	alert('Oh no!!Please Play again to guess correctly');
+}
 };
-
 function birthPlace(bornCity){
-	bornCity = this.bornCity;
-  	bornCity = bornCity.toLowerCase();
-	var expectedAnswer = 'Ongole';
-
+	expectedAnswer = 'Ongole';
 	if (bornCity === null) {
-		alert('No User Input. Please enter')
+		alert('No User Input. Please enter');
 	}
 	else if (bornCity === expectedAnswer) {
 		alert('Great and Perfect Guess!!');
@@ -86,9 +101,9 @@ function birthPlace(bornCity){
 
 function favouriteSport(sport){
 	sport = this.sport;
-	var expectedAnswer = 'cricket';
+	expectedAnswer = 'cricket';
 	if (sport === null) {
-		alert('No User Input. Please enter')
+		alert('No User Input. Please enter');
 	}
 	else if (sport === expectedAnswer) {
 		alert('Great and Perfect Guess!!');
