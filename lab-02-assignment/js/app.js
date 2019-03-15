@@ -6,11 +6,17 @@ var playGame = okToPlay();
 	play(playGame);
 	console.log(playGame);
 var car = findMyCar();
-     favouriteCar(car);
+	 favouriteCar(car);
+	 console.log(car);
 	var bornCity = getBirthRegion();
 	birthPlace(bornCity);
+	console.log(bornCity);
 	var sport = getFavouriteSport();
 	favouriteSport(sport);
+	console.log(sport);
+	var vacation = getFavouriteVacation();
+	favouriteVacation(vacation);
+	console.log(vacation);
     var number;
     var counter = 1;
    while (number !== 08) {
@@ -57,6 +63,11 @@ function getBirthRegion() {
 function getFavouriteSport() {
 	var sport = window.prompt('Guess my Favourite Sport');
 	return sport;
+};
+
+function getFavouriteVacation() {
+	var vacation = window.prompt('Guess my Favourite Vacation');
+	return vacation;
 };
 
 function play(playGame){
@@ -106,6 +117,21 @@ function favouriteSport(sport){
 		alert('No User Input. Please enter');
 	}
 	else if (sport === expectedAnswer) {
+		alert('Great and Perfect Guess!!');
+	}
+	else {
+		alert('Oh no!!Please Play again to guess correctly');
+	}
+
+};
+function favouriteVacation(vacation){
+	vacation = this.vacation;
+	expectedAnswer1 = 'Swiss';
+	expectedAnswer2 = 'Europe';
+	if (vacation === null) {
+		alert('No User Input. Please enter');
+	}
+	else if (vacation === expectedAnswer1 || vacation === expectedAnswer2) {
 		alert('Great and Perfect Guess!!');
 	}
 	else {
